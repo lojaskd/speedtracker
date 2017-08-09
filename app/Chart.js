@@ -33,12 +33,14 @@ class Chart extends React.Component {
       })
 
       datasets.push({
+        cubicInterpolationMode: 'linear',
+        fill: false,
         backgroundColor: Utils.getColor(metric.color, 0.5),
         borderColor: Utils.getColor(metric.color, 1),
         borderWidth: 1,
         data: values,
         label: metric.name,
-        lineTension: 0.6,
+        lineTension: 0,
         pointHoverRadius: 10,
         pointHitRadius: 10,
         pointRadius: 5
